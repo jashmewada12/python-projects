@@ -17,8 +17,10 @@ def display():
     print("4.Adding both the matrix")
     print("5.Subtracting matrix")
     print("6.View matrix")
-    print("7.exit")
-
+    print("7.Adjoint of matrix 1")
+    print("8.Adjoint of matrix 2")
+    print("9.exit")
+    print("-----------------------------")
 
 def values(rows,cols):
     matrix = np.zeros((rows,cols), dtype=int)
@@ -75,7 +77,7 @@ while True:
         clrscr()
         if matrix1.shape == matrix2.shape:
             print(f"The subtraction of matrix is:")
-            matrixsub = matrix1 = matrix2
+            matrixsub = matrix1 - matrix2
             viewmat(matrixsub)
             time.sleep(4)
     
@@ -92,9 +94,16 @@ while True:
             viewmat(matrix2)
             time.sleep(4)
     
- 
-   
     elif choice == 7:
+        adjmat1 = matrix1.conjugate().T
+        viewmat(adjmat1)
+        time.sleep(4)
+
+    elif choice == 8:
+        adjmat2 =matrix2.conjugate().T 
+        viewmat(adjmat2)   
+        time.sleep(4)
+    elif choice == 9:
         break
     
     else:
