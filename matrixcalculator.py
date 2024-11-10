@@ -72,6 +72,9 @@ while True:
             matrixa = matrix1 + matrix2
             viewmat(matrixa)
             time.sleep(4)
+        else:
+            print("Rank of matirx A is not equal to rank of matrix B")
+            time.sleep(4)    
     
     elif choice == 5:
         clrscr()
